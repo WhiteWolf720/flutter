@@ -52,19 +52,18 @@ class PruebaStack extends StatelessWidget {
                 Container(
                   width: 150.0,
                   height: 150.0,
-                  color: Colors.blue,
+                  //color: Colors.blue,
                   padding: const EdgeInsets.all(15.0),
-                  alignment: Alignment.bottomLeft,
+                  alignment: Alignment.bottomCenter, //left
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: 
-                    NetworkImage('https://ih1.redbubble.net/image.1558722819.4560/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg'
-                      )
+                    NetworkImage('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Google-flutter-logo.png/799px-Google-flutter-logo.png')
                     ),
                   ),
-                  child: Text('Cuatro', 
-                    style: TextStyle(
-                      color: Colors.white),
+                  child: const Text(
+                    'Cuatro', 
+                    style: TextStyle(color: Colors.white),
                     )
                 )
               ],

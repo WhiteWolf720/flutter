@@ -21,10 +21,16 @@ class ThirdPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset(
+              Image.network(
+              'https://c.tenor.com/e8HvLaOuK14AAAAM/chayanne-paolomon.gif',
+                width: 200,
+                height: 200,
+                fit: BoxFit.contain,
+              ),
+              /*Image.asset(
                 'assets/images/jojo.jpg',
                 width: 100.0,
-              ),
+              ),*/
               SizedBox(
                 height: 20.0,
               ),

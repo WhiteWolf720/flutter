@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'pages/dataPage.dart';
 import 'pages/pruebaStack.dart';
 import 'pages/secondScreen.dart';
+import 'pages/stackDatos.dart';
 import 'pages/thirdScreen.dart';
 
 void main() {
@@ -16,7 +17,8 @@ void main() {
       '/second' : (context) => const SecondPage(),
       '/datos'  : (context) => const DataPage(),
       '/third'  : (context) => const ThirdPage(),
-      '/stack'  : (context) => const PruebaStack()
+      '/stack'  : (context) => const PruebaStack(),
+      '/stackDatos' : (context) => const StackDatos()
     }
     //home: HomePage(),
     )
@@ -103,6 +105,20 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                   final route = MaterialPageRoute(
                     builder: (context) => const PruebaStack(),
+                  );
+                  Navigator.push(context, route);
+                }),
+                 SizedBox(height: 10.0),
+                ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.purple),
+                  padding: MaterialStateProperty.all(
+                      EdgeInsets.symmetric(horizontal: 25, vertical: 15)),
+                ),
+                child: const Text('StackDatos'),
+                onPressed: () {
+                  final route = MaterialPageRoute(
+                    builder: (context) => const StackDatos(),
                   );
                   Navigator.push(context, route);
                 })
