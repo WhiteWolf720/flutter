@@ -14,6 +14,7 @@ class _MyStateFulWidgetState extends State<MyStateFulWidget> {
   late TextEditingController _controller;
 
   bool chick = false;
+  bool chicks = false;
 
   @override
   void initState(){
@@ -114,12 +115,31 @@ class _MyStateFulWidgetState extends State<MyStateFulWidget> {
               ),
               const SizedBox(height: 20.0),
               Text("Es para mi? 👉👈"),
-              Checkbox(value: chick, onChanged: (bool? value){
+              CheckboxListTile( title: const Text("Chi"), value: chick, onChanged: (bool? value){
                 setState(() {
                   chick = value!;
                 });
               }
-              )
+              ),
+              CheckboxListTile( title: const Text("Ño"), value: chicks, onChanged: (bool? value){
+                setState(() {
+                  chicks = value!;
+                });
+              }
+              ),
+              ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.red),
+                  padding: MaterialStateProperty.all(
+                      EdgeInsets.symmetric(horizontal: 25, vertical: 15)),
+                ),
+                child: const Text('Comprar NFT 🥵'),
+                onPressed: () {
+                  final route = MaterialPageRoute(
+                    builder: (context) => MyStateFulWidget(),
+                  );
+                  Navigator.push(context, route);
+                })
             ]
           ),
         )
