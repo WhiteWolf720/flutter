@@ -63,6 +63,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/Waifus.png
+    - assets/images/icon.png
     - assets/images/jojo.jpg
     - assets/images/1.gif
 

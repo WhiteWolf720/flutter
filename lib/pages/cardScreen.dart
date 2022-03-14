@@ -41,7 +41,7 @@ class _CardScreen extends State<CardScreen>
             [
               Image.network
               (
-                'https://www.bbva.mx/content/dam/public-web/mexico/images/Tarjeta_digital_oro_contactless.png.img.320.1620688389682.png',
+                'https://i.ibb.co/MkRb1fY/Banorte-TDC-Oro-Visa-2020.png',
               ),
               Container
               (
@@ -67,10 +67,10 @@ class _CardScreen extends State<CardScreen>
                   (
                     prefixIcon: Icon
                     (
-                      Icons.account_circle_outlined
+                      Icons.person_outline
                     ),
                     labelText: 'Nombre',
-                    hintText: 'Josue Hernandez'
+                    hintText: 'Diego Osornio Yáñez'
                   )
                 ),
               ),
@@ -109,8 +109,8 @@ class _CardScreen extends State<CardScreen>
                     (
                       Icons.credit_card
                     ),
-                    labelText: 'Numero de tarjeta',
-                    hintText: '7263-2536-7637-9827'
+                    labelText: 'Número de tarjeta',
+                    hintText: '1234-1234-1234-1234'
                   )
                 ),
               ),
@@ -149,7 +149,7 @@ class _CardScreen extends State<CardScreen>
                         (
                           Icons.date_range_outlined
                         ),
-                        labelText: 'Expiracion',
+                        labelText: 'Expiración',
                         hintText: '20/12'
                       )
                     ),
@@ -176,10 +176,10 @@ class _CardScreen extends State<CardScreen>
                       (
                         prefixIcon: Icon
                         (
-                          Icons.numbers
+                          Icons.shield
                         ),
                         labelText: 'CVV',
-                        hintText: '123'
+                        hintText: '777'
                       )
                     ),
                   )
@@ -191,7 +191,7 @@ class _CardScreen extends State<CardScreen>
               ),
               ElevatedButton
               (
-                child: const Text("Pagar"),
+                child: const Text("Pagar - Es para mi? 👉👈"),
                 onPressed: (){}
               )
             ]
