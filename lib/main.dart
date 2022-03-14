@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:prueba/pages/cardScreen.dart';
 
 import 'pages/dataPage.dart';
 import 'pages/formScreen.dart';
@@ -20,7 +21,8 @@ void main() {
       '/third'  : (context) => const ThirdPage(),
       '/stack'  : (context) => const PruebaStack(),
       '/stackDatos' : (context) => const StackDatos(),
-      '/formScreen' : (context) => MyStateFulWidget()
+      '/formScreen' : (context) => MyStateFulWidget(),
+      '/cardScreen' : (context) => CardScreen()
     }
     //home: HomePage(),
     )
@@ -135,6 +137,19 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                   final route = MaterialPageRoute(
                     builder: (context) => MyStateFulWidget(),
+                  );
+                  Navigator.push(context, route);
+                }),
+                ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.purple),
+                  padding: MaterialStateProperty.all(
+                      EdgeInsets.symmetric(horizontal: 25, vertical: 15)),
+                ),
+                child: const Text('Pagar'),
+                onPressed: () {
+                  final route = MaterialPageRoute(
+                    builder: (context) => CardScreen(),
                   );
                   Navigator.push(context, route);
                 })

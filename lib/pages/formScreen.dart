@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_emoji/flutter_emoji.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class MyStateFulWidget extends StatefulWidget {
   MyStateFulWidget({Key? key}) : super(key: key);
@@ -15,6 +16,12 @@ class _MyStateFulWidgetState extends State<MyStateFulWidget> {
 
   bool chick = false;
   bool chicks = false;
+
+var maskFormatter = new MaskTextInputFormatter(
+  mask: '####-####-####', 
+  filter: { "#": RegExp(r'[0-9]') },
+  type: MaskAutoCompletionType.lazy
+);
 
   @override
   void initState(){
@@ -98,10 +105,11 @@ class _MyStateFulWidgetState extends State<MyStateFulWidget> {
               TextField(
                 keyboardType: TextInputType.number,
                 inputFormatters: [
+                  maskFormatter,
                   FilteringTextInputFormatter.allow(
                     RegExp('[0-9 -]')
                   ),
-                  LengthLimitingTextInputFormatter(16)
+                  LengthLimitingTextInputFormatter(16),
                 ],
                 decoration: const InputDecoration
                 (
